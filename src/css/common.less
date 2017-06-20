@@ -1,0 +1,39 @@
+body {
+	font-size: 16px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	padding: 10px;
+	margin: 0;
+}
+
+table {
+
+	th.sortColumn {
+		span.glyphicon {
+			cursor: default !important;
+			padding: 0 !important;
+		}
+	}
+
+	tr.selected {
+		background: #EEA !important;
+	}
+
+	span.glyphicon {
+		font-size: 16px;
+		cursor: pointer;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		&.glyphicon-remove {
+			color: indianred;					
+		}
+		&.glyphicon-pencil {
+			color: orange;
+		}		
+		&.glyphicon-plus {
+			color: cornflowerblue;
+		}
+	}
+
+
+}

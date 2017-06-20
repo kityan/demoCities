@@ -1,0 +1,32 @@
+<form ng-submit="saveDistrict()">
+	<div class="modal-header"><span ng-if="!editMode">Создание</span><span ng-if="editMode">Редактирование</span> района {{district.name}} в городе {{cityName}}</div>
+	<div class="modal-body">
+
+		<div class="row">
+			<div class="col-xs-12 form-group">
+				<label>Название района</label>
+				<input ng-disabled="saved" type="text" class="form-control" ng-model="district.name" autocomplete="off" placeholder="Название района" />
+			</div>
+
+			<div class="col-xs-6 form-group">
+				<label>Население, человек</label>
+				<input ng-disabled="saved" type="text" class="form-control" ng-model="district.population" autocomplete="off" placeholder="Население" />
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div ng-if="saved" class="alert alert-success">Данные успешно сохранены!</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="modal-footer">
+		<button class="btn btn-primary" ng-if="saved && !editMode" ng-click="oneMore()">Добавить ещё один</button>
+		<button class="btn btn-primary" ng-if="!saved" type="submit" ng-disabled="!valid">Сохранить</button>
+		<button class="btn btn-default" type="button" ng-click="cancel()"><span ng-if="!saved">Отмена</span><span ng-if="saved">Закрыть</span></button>
+
+	</div>
+</form>
