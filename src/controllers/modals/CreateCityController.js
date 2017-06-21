@@ -10,6 +10,8 @@
 		// расширяем контроллер
 		$controller('_SaveCityController', { $scope: $scope, $uibModalInstance: $uibModalInstance });
 
+		$scope.city = {}
+
 		$scope.saveCity = function () {
 			if (!$scope.valid || $scope.inProgress) {
 				return;

@@ -11,6 +11,7 @@
 		$controller('_SaveDistrictController', { $scope: $scope, $uibModalInstance: $uibModalInstance });
 
 		$scope.cityName = city.city_name;
+		$scope.district = {}
 
 		$scope.saveDistrict = function () {
 			if (!$scope.valid || $scope.inProgress) {
