@@ -31,6 +31,9 @@
 		$scope.toggleSortColumn = function (column) {
 			$scope.sortReverse = ($scope.sortColumn != column) ? false : !$scope.sortReverse;
 			$scope.sortColumn = column;
+			// to fix: 
+			// [popOrder('city'), 'city_name'] при реверсе даёт реверс для обоих сортировок, а нужно только для первой
+			// с другой стороны можно реверсить по элементам, но [-popOrder('city'), 'city_name'] не работает, следовательно надо реверсить [popOrder('city'), '-city_name']?
 		}
 
 		$scope.sortColumn = 'name';

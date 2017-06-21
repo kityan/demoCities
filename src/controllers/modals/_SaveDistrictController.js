@@ -18,6 +18,7 @@
 			if (district) {
 				$scope.valid = (!district.name) ? false : $scope.valid;
 				$scope.valid = (isNaN(district.population * 1)) ? false : $scope.valid;
+				// to fix: валидацию  >= 0
 			}
 		}, true);
 

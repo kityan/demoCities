@@ -19,6 +19,7 @@
 				$scope.valid = (!city.name) ? false : $scope.valid;
 				$scope.valid = (!city.lat || isNaN(city.lat.toString().replace(',', '.') * 1)) ? false : $scope.valid;
 				$scope.valid = (!city.lon || isNaN(city.lon.toString().replace(',', '.') * 1)) ? false : $scope.valid;
+				// to fix: валидацию адекватности координат?
 			}
 		}, true);
 
