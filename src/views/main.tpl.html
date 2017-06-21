@@ -6,7 +6,11 @@
 
 	<div class="col-sm-12">
 
-		<table class="table table-hover">
+		<div style="font-size: 50px; text-align: center; padding: 20px;" ng-if="!cities">
+			<span class="glyphicon glyphicon-hourglass"></span>
+		</div>
+
+		<table class="table table-hover" ng-if="cities">
 			<thead>
 				<tr>
 					<th class="sortColumn">
